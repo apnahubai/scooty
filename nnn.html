@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adyta E-Vehicle Scooty | Smart & Sustainable</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #00ab6b;
+            --dark-blue: #0b1523;
+            --text-gray: #666;
+            --light-bg: #f8f9fa;
+        }
+
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background-color: white; color: #333; }
+
+        /* --- Navigation --- */
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 8%; background: white; border-bottom: 1px solid #eee;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; color: var(--dark-blue); }
+        .logo span { color: var(--primary-green); font-size: 12px; display: block; }
+        nav a { text-decoration: none; color: #333; margin: 0 15px; font-weight: 500; font-size: 15px; }
+        .nav-icons { display: flex; align-items: center; gap: 20px; }
+        .search-bar { background: #f1f3f6; border-radius: 20px; padding: 5px 15px; border: none; outline: none; }
+
+        /* --- Hero Banner (Festival Dhamaka) --- */
+        .hero {
+            background: linear-gradient(90deg, #1a1a1a 40%, rgba(255,255,255,0.1) 100%), 
+                        url('https://images.unsplash.com/photo-1591438676295-9d862b8a8262?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; height: 500px; color: white;
+            display: flex; flex-direction: column; justify-content: center; padding: 0 8%;
+        }
+        .special-tag { background: #ffd700; color: black; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; width: fit-content; }
+        .hero h1 { font-size: 55px; margin: 15px 0; font-weight: 800; }
+        .hero p { font-size: 18px; max-width: 450px; opacity: 0.9; margin-bottom: 30px; }
+        .shop-btn { background: var(--primary-green); color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; width: fit-content; }
+
+        /* --- Stats/Features Bar --- */
+        .features-bar {
+            display: flex; justify-content: space-around; background: white;
+            padding: 30px 8%; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-top: -40px; border-radius: 15px; width: 80%; margin-left: auto; margin-right: auto;
+        }
+        .feature-item { text-align: center; font-size: 14px; color: var(--text-gray); }
+        .feature-item strong { display: block; color: var(--dark-blue); font-size: 16px; }
+
+        /* --- Trending Models --- */
+        .section-padding { padding: 60px 8%; }
+        .trending-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        
+        .card { background: white; border: 1px solid #eee; border-radius: 20px; padding: 20px; transition: 0.3s; position: relative; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .badge { position: absolute; top: 15px; left: 15px; background: #ff4747; color: white; padding: 5px 10px; border-radius: 5px; font-size: 11px; font-weight: bold; }
+        .card img { width: 100%; border-radius: 15px; margin-bottom: 15px; }
+        .specs { display: flex; justify-content: space-between; background: #f9f9f9; padding: 10px; border-radius: 10px; margin: 15px 0; font-size: 12px; text-align: center; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; }
+        .buy-now { background: var(--primary-green); color: white; border: none; padding: 10px 25px; border-radius: 10px; font-weight: 600; cursor: pointer; }
+
+        /* --- Footer (Dark Theme) --- */
+        footer { background: var(--dark-blue); color: white; padding: 80px 8% 20px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 50px; }
+        .footer-col h4 { margin-bottom: 25px; font-size: 18px; position: relative; }
+        .footer-col h4::after { content: ''; width: 40px; height: 3px; background: var(--primary-green); position: absolute; left: 0; bottom: -8px; }
+        .footer-col ul { list-style: none; padding: 0; }
+        .footer-col ul li { margin-bottom: 12px; opacity: 0.7; font-size: 14px; cursor: pointer; }
+        .footer-col ul li:hover { opacity: 1; color: var(--primary-green); }
+        
+        .newsletter input { background: #1a2635; border: none; padding: 12px; width: 100%; border-radius: 8px; color: white; margin-bottom: 10px; }
+        .join-btn { background: var(--primary-green); color: white; width: 100%; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+
+        .footer-bottom { border-top: 1px solid #222; margin-top: 50px; padding-top: 20px; display: flex; justify-content: space-between; font-size: 12px; opacity: 0.6; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/1165/1165910.png" width="30" alt="logo">
+            <div>ADYTA<br><span>E-VEHICLE SCOOTY</span></div>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#models">Models</a>
+            <a href="#about">About Us</a>
+        </nav>
+        <div class="nav-icons">
+            <input type="text" placeholder="Search models..." class="search-bar">
+            <span style="font-size: 20px; cursor: pointer;">🛒</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="special-tag">SPECIAL OFFER</div>
+        <h1>Festival<br>Dhamaka!</h1>
+        <p>Flat 15% OFF on all Adyta Pro models. Experience the future of mobility with high speed and high performance.</p>
+        <a href="#models" class="shop-btn">Shop Now →</a>
+    </section>
+
+    <div class="features-bar">
+        <div class="feature-item"><strong>Free Home Delivery</strong>T&C Apply</div>
+        <div class="feature-item"><strong>Certified Range</strong>ARAI APPROVED</div>
+        <div class="feature-item"><strong>5 Year Warranty</strong>COMPREHENSIVE</div>
+        <div class="feature-item"><strong>24/7 Support</strong>PAN INDIA</div>
+    </div>
+
+    <section class="section-padding" id="models">
+        <div class="trending-header">
+            <div>
+                <h2>Trending Models</h2>
+                <p style="color: #666;">Experience the future of urban mobility with our top-selling models.</p>
+            </div>
+            <button style="border: 1px solid #ccc; background: white; padding: 10px 20px; border-radius: 10px; cursor: pointer;">Explore Catalog ></button>
+        </div>
+
+        <div class="product-grid">
+            <div class="card">
+                <div class="badge">14% OFF</div>
+                <img src="https://images.unsplash.com/photo-1558981403-c5f91cbcfc23?auto=format&fit=crop&w=400&q=80" alt="scooty">
+                <h3>Adyta Stealth S1</h3>
+                <p style="font-size: 13px; color: #777;">Ditch the gas pump and ride into the future with Stealth S1.</p>
+                <div class="specs">
+                    <div><strong>120 km</strong><br>Range</div>
+                    <div><strong>85 km/h</strong><br>Speed</div>
+                    <div><strong>4 hrs</strong><br>Charge</div>
+                </div>
+                <div class="price-row">
+                    <div>
+                        <span style="font-size: 20px; font-weight: 700;">₹85,000</span>
+                        <span style="font-size: 13px; text-decoration: line-through; color: #999;">₹99,000</span>
+                    </div>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="badge">10% OFF</div>
+                <img src="https://images.unsplash.com/photo-1597401417215-61882375836f?auto=format&fit=crop&w=400&q=80" alt="scooty">
+                <h3>Adyta Urban X</h3>
+                <p style="font-size: 13px; color: #777;">The ultimate zero-emission ride for city explorers.</p>
+                <div class="specs">
+                    <div><strong>80 km</strong><br>Range</div>
+                    <div><strong>60 km/h</strong><br>Speed</div>
+                    <div><strong>3.5 hrs</strong><br>Charge</div>
+                </div>
+                <div class="price-row">
+                    <div>
+                        <span style="font-size: 20px; font-weight: 700;">₹65,000</span>
+                        <span style="font-size: 13px; text-decoration: line-through; color: #999;">₹72,000</span>
+                    </div>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="badge" style="background: #00ab6b;">BEST SELLER</div>
+                <img src="https://images.unsplash.com/photo-1611311094056-b07693967812?auto=format&fit=crop&w=400&q=80" alt="scooty">
+                <h3>Adyta Pro Max</h3>
+                <p style="font-size: 13px; color: #777;">Blending high power with intelligent technology.</p>
+                <div class="specs">
+                    <div><strong>180 km</strong><br>Range</div>
+                    <div><strong>100 km/h</strong><br>Speed</div>
+                    <div><strong>5.5 hrs</strong><br>Charge</div>
+                </div>
+                <div class="price-row">
+                    <div>
+                        <span style="font-size: 20px; font-weight: 700;">₹1,10,000</span>
+                        <span style="font-size: 13px; text-decoration: line-through; color: #999;">₹1,25,000</span>
+                    </div>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="about" style="background: #fdfdfd; display: flex; gap: 50px; align-items: center;">
+        <div style="flex: 1; position: relative;">
+            <img src="https://images.unsplash.com/photo-1591438676295-9d862b8a8262?auto=format&fit=crop&w=600&q=80" style="width: 100%; border-radius: 30px;" alt="About Adyta">
+            <div style="position: absolute; bottom: -20px; right: -20px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
+                <span style="font-size: 24px; font-weight: 800; color: var(--primary-green);">#1</span><br>
+                <span style="font-size: 12px; font-weight: 600;">EV Brand 2024</span>
+            </div>
+        </div>
+        <div style="flex: 1;">
+            <span style="background: #e6f7f0; color: var(--primary-green); padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">OUR MISSION</span>
+            <h2 style="font-size: 40px; margin: 20px 0;">Crafting the <span style="color: var(--primary-green);">Future</span> of Sustainable Transit</h2>
+            <p style="color: #666; line-height: 1.8;">At Adyta, we're not just building scooters; we're building a movement. Every Adyta scooty represents our commitment to reducing carbon footprints while maximizing joy.</p>
+            <div style="display: flex; gap: 30px; margin-top: 30px;">
+                <div>
+                    <strong>Instant Torque</strong>
+                    <p style="font-size: 13px; color: #777;">Experience zero-lag acceleration from the first second.</p>
+                </div>
+                <div>
+                    <strong>Smart App</strong>
+                    <p style="font-size: 13px; color: #777;">Control features and track health via your smartphone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2 style="margin: 0; display: flex; align-items: center; gap: 10px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1165/1165910.png" width="30" style="filter: brightness(0) invert(1);"> ADYTA
+                </h2>
+                <p style="opacity: 0.7; font-size: 14px; margin-top: 20px; line-height: 1.6;">The leading name in premium electric scooters in India. Join over 50,000 riders in the green revolution today.</p>
+                <div style="margin-top: 20px; display: flex; gap: 15px;">
+                    <span>🔵</span><span>📸</span><span>🐦</span><span>💼</span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li>Home</li>
+                    <li>Electric Models</li>
+                    <li>Our Legacy</li>
+                    <li>Career</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Hub</h4>
+                <ul>
+                    <li>Service Centers</li>
+                    <li>Charging Infrastructure</li>
+                    <li>Warranty Policy</li>
+                    <li>Roadside Assistance</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Stay Charged</h4>
+                <p style="font-size: 14px; opacity: 0.7;">Get the latest on model updates and flash sales.</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="rider@example.com">
+                    <button class="join-btn">Join Community</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Adyta E-Vehicle Scooty India. Engineered for the future.</p>
+            <div>Secure Payments | Pan-India Delivery | 24/7 Support</div>
+        </div>
+    </footer>
+
+</body>
+</html>
